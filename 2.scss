@@ -1,0 +1,35 @@
+.userCard {
+    /*！单行注释*/
+    width: 100px;
+    &.active {
+        background: yellow;
+    }
+    &-name {
+        $red-cover: #6f4;
+        color: blue;
+        &:hover {
+            color: $red-cover;
+        }
+    }
+    font: {
+        size: 32px;
+        weight: bold;
+        family: 'Times New Roman', Times, serif
+    }
+    $red: #ff0000;
+    &-oneSentence {
+        color: fade-out($red, 0.5);
+        border: 1px solid $red;
+        $green: #fe2;
+        &::before {
+            content: '(#{$green}'
+        }
+        &::after {
+            content: ')'
+        }
+    }
+    &-description {
+        color: red;
+        border: 1px solid $red;
+    }
+}
